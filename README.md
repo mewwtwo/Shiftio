@@ -7,7 +7,6 @@
   <img alt="Swift 6" src="https://img.shields.io/badge/Swift-6-F05138?logo=swift&logoColor=white">
   <img alt="Apple silicon" src="https://img.shields.io/badge/Apple%20silicon-arm64-444">
   <img alt="11 languages" src="https://img.shields.io/badge/languages-11-2f7">
-  <img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue">
 </p>
 
 <p align="center">
@@ -35,7 +34,7 @@ Everything runs on the Mac, offline. No account, no Accessibility permission, no
 
 ## Contents
 
-[File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Under the hood](#under-the-hood) · [Build](#build)
+[File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
 ## The file ring
 
@@ -49,7 +48,11 @@ Drag a file and press the trigger key (Shift by default). The ring shows what fi
 - **Rings that adapt:** a different set for images, PDFs, documents, audio, video, and for several files at once.
 - **Recent tools first:** the tools you used last and most often float to the front.
 - **Fully configurable:** reorder tiles, rename them, give a tile your own icon or emoji, add **Shortcuts** or apps, add or remove whole rings.
-- **Touch Bar mirror:** the visible ring is mirrored on the Touch Bar (Developer ID builds).
+- **Touch Bar support:** on Macs with a Touch Bar the open ring is mirrored there, tinted with your accent. Tap a tile to run the action, or the ring button to flip to the next ring; the Touch Bar follows the ring as you switch. No setup needed.
+
+<p align="center">
+  <img src="docs/images/touchbar.png" width="60%" alt="The Convert ring mirrored on the Touch Bar">
+</p>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/settings-rings-image-dark.webp"><img src="docs/images/settings-rings-image.webp" width="60%" alt="Ring editor"></picture>
@@ -182,26 +185,14 @@ A short interactive tour teaches both rings by letting you press the real keys, 
 - **Menu bar popover:** on/off switch, recent results with errors and **Clear**, Settings and Quit.
 - **11 languages:** English, Ukrainian, Spanish, Portuguese, Japanese, Simplified Chinese, Korean, French, Czech, Italian and Indonesian. Follows the system language or the one you pick.
 
-## Under the hood
+## Privacy and technology
 
-- **Radial UI in Liquid Glass.** One `GlassEffectContainer` with `glassEffectID` morphs between rings; the rules for keeping glass from flattening are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
-- **No Accessibility permission.** Drags are detected with global mouse monitors and the trigger keys by polling modifier flags, so nothing asks for input monitoring.
-- **Privacy-first permissions.** Opening a ring never raises a system dialog; Bluetooth, Automation (Music, Spotify, System Events) and Files & Folders are requested only when you press Allow.
-- **On-device processing.** Vision (OCR, subject masks), Speech, Core Image, AVFoundation and PDFKit; nothing is uploaded.
-- **First-launch components.** The MP3 encoder is downloaded as a checksum-verified Homebrew bottle and patched to load from the app's folder, so the app bundle stays small.
-- **Localization.** String Catalogs for 11 languages, checked in the longest ones and in CJK.
-- About 16,000 lines of Swift, 40 unit tests.
-
-## Build
-
-```bash
-brew install xcodegen
-xcodegen generate
-xcodebuild -scheme Shiftio -derivedDataPath ~/Library/Developer/ShiftioDD build
-```
-
-Requires macOS 26, Xcode 26 and an Apple silicon Mac. Details, launch arguments for screenshots, packaging a DMG and notarization are in [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+- **No Accessibility permission.** Nothing asks for input monitoring.
+- **Permissions only on request.** Opening a ring never raises a system dialog; Bluetooth, Automation (Music, Spotify, System Events) and Files & Folders are requested only when you press Allow.
+- **On-device processing.** Vision (OCR, subject masks), Speech, Core Image, AVFoundation and PDFKit; nothing is uploaded and there is no account.
+- **First-launch components.** The MP3 encoder is downloaded as a checksum-verified Homebrew bottle, and the speech model on demand, so the app stays small.
+- **Native.** SwiftUI and Liquid Glass, Apple silicon, 11 languages.
 
 ## Author
 
-Dmytro Demchuk ([@mewwtwo](https://github.com/mewwtwo)). Released under the [MIT license](LICENSE).
+Dmytro Demchuk ([@mewwtwo](https://github.com/mewwtwo)).

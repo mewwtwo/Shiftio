@@ -1,5 +1,5 @@
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.webp?v=2"><img src="docs/images/hero.webp?v=2" alt="Shiftio: a file conversion ring, a pop-up ring with a music player and a video editor" width="100%"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.webp?v=3"><img src="docs/images/hero.webp?v=3" alt="Shiftio: a file conversion ring, a pop-up ring with a music player and a video editor" width="100%"></picture>
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.3 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.4 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 

@@ -23,3 +23,6 @@ templates/
 Design/AppIcon-glass.png
 Design/make-glass-icon.py
 Design/glass-icon-src/
+docs/DEVELOPMENT.md
+scripts/package-dmg.sh
+Shiftio/App/DebugRender.swift

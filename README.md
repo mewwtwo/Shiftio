@@ -1,5 +1,5 @@
 <p align="center">
-  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.webp"><img src="docs/images/hero.webp" alt="Shiftio: a ring of actions at the pointer, a photo editor and a video editor" width="100%"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.webp?v=2"><img src="docs/images/hero.webp?v=2" alt="Shiftio: a file conversion ring, a pop-up ring with a music player and a video editor" width="100%"></picture>
 </p>
 
 <p align="center">

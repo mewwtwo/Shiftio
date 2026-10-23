@@ -1,0 +1,361 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSBluetoothAlwaysUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio turns Bluetooth on and off from the system controls ring."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio вмикає й вимикає Bluetooth зі спливного кільця системних елементів керування."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio activa y desactiva Bluetooth desde el anillo de controles del sistema."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Shiftio liga e desliga o Bluetooth pelo anel de controles do sistema."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftioは、システムコントロールのリングからBluetoothをオン／オフします。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio 会通过系统控制圆环开关蓝牙。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio는 시스템 제어 링에서 Bluetooth를 켜고 끕니다."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio active et désactive Bluetooth depuis l’anneau des réglages système."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio zapíná a vypíná Bluetooth z kruhu s ovládáním systému."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio attiva e disattiva il Bluetooth dall'anello dei controlli di sistema."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio menyalakan dan mematikan Bluetooth dari cincin kontrol sistem."
+          }
+        }
+      }
+    },
+    "NSLocationUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio reads the Wi-Fi state for the Wi-Fi switch in the system controls ring."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio зчитує стан Wi-Fi для перемикача Wi-Fi у кільці системних елементів керування."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio lee el estado del Wi-Fi para el interruptor de Wi-Fi del anillo de controles del sistema."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Shiftio lê o estado do Wi-Fi para o botão de Wi-Fi no anel de controles do sistema."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftioは、システムコントロールのリングのWi-Fiスイッチのために、Wi-Fiの状態を読み取ります。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio 会读取 Wi-Fi 状态，用于系统控制圆环中的 Wi-Fi 开关。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio는 시스템 제어 링의 Wi-Fi 스위치를 위해 Wi-Fi 상태를 읽습니다."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio lit l’état du Wi-Fi pour le commutateur Wi-Fi de l’anneau des réglages système."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio čte stav Wi-Fi pro přepínač Wi-Fi v kruhu s ovládáním systému."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio legge lo stato del Wi-Fi per l'interruttore Wi-Fi nell'anello dei controlli di sistema."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio membaca status Wi-Fi untuk sakelar Wi-Fi di cincin kontrol sistem."
+          }
+        }
+      }
+    },
+    "NSAppleEventsUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio switches Dark Mode on and off through System Events, and shows and controls playback in Music and Spotify for the player above the System ring."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio перемикає темний режим через System Events, а також показує й керує відтворенням у Music і Spotify для програвача над системним кільцем."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio activa y desactiva el modo oscuro a través de System Events, y muestra y controla la reproducción en Música y Spotify para el reproductor sobre el anillo del sistema."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Shiftio liga e desliga o modo escuro por meio do System Events e mostra e controla a reprodução no Música e no Spotify para o player acima do anel do sistema."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftioは、System Eventsを通じてダークモードをオン／オフし、システムリングの上のプレーヤーのためにMusicとSpotifyの再生を表示・操作します。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio 通过 System Events 开关深色模式，并为系统圆环上方的播放器显示和控制“音乐”与 Spotify 中的播放。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio는 System Events를 통해 다크 모드를 켜고 끄며, 시스템 링 위의 플레이어를 위해 Music과 Spotify의 재생을 표시하고 제어합니다."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio active et désactive le mode sombre via System Events, et affiche et contrôle la lecture dans Musique et Spotify pour le lecteur au-dessus de l’anneau Système."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio zapíná a vypíná tmavý režim přes System Events a zobrazuje a ovládá přehrávání v Hudbě a Spotify pro přehrávač nad systémovým kruhem."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio attiva e disattiva il modo scuro tramite System Events, e mostra e controlla la riproduzione in Musica e Spotify per il player sopra l'anello di sistema."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio menyalakan dan mematikan Mode Gelap melalui System Events, serta menampilkan dan mengontrol pemutaran di Musik dan Spotify untuk pemutar di atas cincin Sistem."
+          }
+        }
+      }
+    },
+    "NSSpeechRecognitionUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio transcribes audio and video files on your Mac."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio транскрибує аудіо- та відеофайли на вашому Mac."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio transcribe archivos de audio y vídeo en tu Mac."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Shiftio transcreve arquivos de áudio e vídeo no seu Mac."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftioは、Mac上のオーディオ／ビデオファイルを文字起こしします。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio 会在你的 Mac 上转录音频和视频文件。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio는 Mac에서 오디오 및 비디오 파일을 받아씁니다."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio transcrit les fichiers audio et vidéo sur votre Mac."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio přepisuje zvukové a video soubory na vašem Macu."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio trascrive i file audio e video sul tuo Mac."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio mentranskripsikan berkas audio dan video di Mac Anda."
+          }
+        }
+      }
+    },
+    "NSBluetoothPeripheralUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio turns Bluetooth on and off from the system controls ring."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio вмикає й вимикає Bluetooth зі спливного кільця системних елементів керування."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio activa y desactiva Bluetooth desde el anillo de controles del sistema."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O Shiftio liga e desliga o Bluetooth pelo anel de controles do sistema."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftioは、システムコントロールのリングからBluetoothをオン／オフします。"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio 会通过系统控制圆环开关蓝牙。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio는 시스템 제어 링에서 Bluetooth를 켜고 끕니다."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio active et désactive Bluetooth depuis l’anneau des réglages système."
+          }
+        },
+        "cs": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio zapíná a vypíná Bluetooth z kruhu s ovládáním systému."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio attiva e disattiva il Bluetooth dall'anello dei controlli di sistema."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shiftio menyalakan dan mematikan Bluetooth dari cincin kontrol sistem."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

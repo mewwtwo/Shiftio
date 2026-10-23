@@ -1,0 +1,73 @@
+name: Shiftio
+options:
+  bundleIdPrefix: com.playgocorp
+  developmentLanguage: en
+  deploymentTarget:
+    macOS: "26.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    # Apple silicon only.
+    ARCHS: arm64
+    ONLY_ACTIVE_ARCH: NO
+    MACOSX_DEPLOYMENT_TARGET: "26.0"
+targets:
+  Shiftio:
+    type: application
+    platform: macOS
+    sources:
+      - Shiftio
+    entitlements:
+      path: Shiftio/Resources/Shiftio.entitlements
+      properties:
+        # The app is hardened; without this macOS never asks whether it may control Music, Spotify or System Events.
+        com.apple.security.automation.apple-events: true
+    info:
+      path: Shiftio/Resources/Info.plist
+      properties:
+        LSUIElement: true
+        CFBundleIconName: AppIcon
+        NSBluetoothAlwaysUsageDescription: "Shiftio turns Bluetooth on and off from the system controls ring."
+        NSBluetoothPeripheralUsageDescription: "Shiftio turns Bluetooth on and off from the system controls ring."
+        NSLocationUsageDescription: "Shiftio reads the Wi-Fi state for the Wi-Fi switch in the system controls ring."
+        NSAppleEventsUsageDescription: "Shiftio switches Dark Mode on and off through System Events, and shows and controls playback in Music and Spotify for the player above the System ring."
+        CFBundleIconFile: AppIcon
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, uk, es, pt-PT, ja, zh-Hans, ko, fr, cs, it, id]
+        CFBundleDisplayName: Shiftio
+        CFBundleShortVersionString: "0.1.0"
+        CFBundleVersion: "1"
+        NSHumanReadableCopyright: "© 2026 Dmytro Demchuk"
+        NSSpeechRecognitionUsageDescription: "Shiftio transcribes audio and video files on your Mac."
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.playgocorp.shiftio
+        ENABLE_HARDENED_RUNTIME: YES
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
+        DEVELOPMENT_TEAM: 3MSL3M4D4A
+        GENERATE_INFOPLIST_FILE: NO
+        SWIFT_OBJC_BRIDGING_HEADER: Shiftio/Shiftio-Bridging-Header.h
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+        STRING_CATALOG_GENERATE_SYMBOLS: NO
+  ShiftioTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: [ShiftioTests]
+    dependencies:
+      - target: Shiftio
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Shiftio.app/Contents/MacOS/Shiftio"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+schemes:
+  Shiftio:
+    build:
+      targets:
+        Shiftio: all
+        ShiftioTests: [test]
+    test:
+      targets: [ShiftioTests]

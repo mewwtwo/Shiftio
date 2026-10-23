@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Xcode / build output (the project is generated from project.yml by XcodeGen)
+Shiftio.xcodeproj/
+xcuserdata/
+DerivedData/
+build/
+dist/
+*.dmg
+*.zip
+
+# Local tooling and notes
+.codegraph/
+.claude/
+.codex/
+.mcp.json
+AGENTS.md
+CLAUDE.md
+
+# Design reference screenshots (other apps' interfaces, not for publishing)
+templates/
+
+# Second icon idea, on hold
+Design/AppIcon-glass.png
+Design/make-glass-icon.py
+Design/glass-icon-src/

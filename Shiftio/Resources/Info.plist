@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>Shiftio</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>en</string>
+		<string>uk</string>
+		<string>es</string>
+		<string>pt-PT</string>
+		<string>ja</string>
+		<string>zh-Hans</string>
+		<string>ko</string>
+		<string>fr</string>
+		<string>cs</string>
+		<string>it</string>
+		<string>id</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>Shiftio switches Dark Mode on and off through System Events, and shows and controls playback in Music and Spotify for the player above the System ring.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Shiftio turns Bluetooth on and off from the system controls ring.</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Shiftio turns Bluetooth on and off from the system controls ring.</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>© 2026 Dmytro Demchuk</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Shiftio reads the Wi-Fi state for the Wi-Fi switch in the system controls ring.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Shiftio transcribes audio and video files on your Mac.</string>
+</dict>
+</plist>

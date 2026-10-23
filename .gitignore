@@ -6,9 +6,7 @@ Shiftio.xcodeproj/
 xcuserdata/
 DerivedData/
 build/
-dist/
-*.dmg
-*.zip
+downloads/*.tmp
 
 # Local tooling and notes
 .codegraph/

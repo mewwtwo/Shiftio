@@ -26,3 +26,11 @@ Design/glass-icon-src/
 docs/DEVELOPMENT.md
 scripts/package-dmg.sh
 Shiftio/App/DebugRender.swift
+
+# Source code stays local; the public repo only has the README, LICENSE, docs images and downloads
+/Shiftio/
+/ShiftioTests/
+/Design/
+/scripts/
+/project.yml
+/docs/DEVELOPMENT.md

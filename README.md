@@ -15,11 +15,11 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.5 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.6 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 
-**Shiftio** lives in the menu bar. Drag any file (or several) and press **Shift**: a ring of actions opens under the pointer. Convert it, compress it, trim it, crop it, annotate it, transcribe it. Drop the file on a tile and the result is saved next to the original. Hold **⌥⇧** with nothing in your hand and a second ring opens with system controls, your apps, folders and Telegram chats.
+**Shiftio** lives in the menu bar. Drag any file (or several) and press **Shift**: a ring of actions opens under the pointer. Convert it, compress it, trim it, crop it, annotate it, preview it, transcribe it. Drop the file on a tile and the result is saved next to the original. Hold **⌥⇧** with nothing in your hand and a second ring opens with system controls, your apps, folders and Telegram chats.
 
 Everything runs on the Mac, offline. No account, no Accessibility permission, no notifications.
 
@@ -30,11 +30,24 @@ Everything runs on the Mac, offline. No account, no Accessibility permission, no
    ```bash
    xattr -dr com.apple.quarantine /Applications/Shiftio.app
    ```
-3. Requires macOS 26 and an Apple silicon Mac. The MP3 encoder and the speech model are downloaded on first launch.
+3. Requires macOS 26 and an Apple silicon Mac. The MP3 encoder, the video converter (ffmpeg) and the speech model are downloaded on first launch.
 
 ## Contents
 
-[File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-016) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+
+## What's new in 0.1.6
+
+- **Docs, Data and Folders rings.** PDF and documents now share one *Docs* ring set, with a new **Data** ring (JSON, CSV, XML) and a **Folder** ring (ZIP, Get Info, and the same tools applied to what is inside a dropped folder).
+- **Preview for Markdown, JSON and XML.** A viewer with images, tables and alerts, a collapsible JSON tree, and a *Preview / Code* switch.
+- **Anything to PDF.** Word, RTF, HTML, text, Markdown, OpenDocument, and Pages, Keynote, Numbers and PowerPoint/Excel when the apps are installed.
+- **PDF pages.** Split a PDF into single pages, or pick the pages to extract from thumbnails.
+- **Archives.** Unpack ZIP, TAR and other archives next to the original; ZIP also works for a single file or folder.
+- **Audio editor.** A waveform trimmer with fades, volume, normalize, speed, format choice and *Trim Silence*.
+- **More video and image formats.** MKV, WebM and AVI in and out, long MKV and HEVC files open in the video editor; WebP, AVIF and SVG for images.
+- **Focus** tile in the pop-up ring: switch Focus modes through your own Shortcuts.
+- **Finder aliases** to folders and files are followed.
+- A welcome page with a progress bar in the tour, and a consistent look across all editor windows.
 
 ## The file ring
 
@@ -68,6 +81,7 @@ Hold **⌥⇧** (about 0.3 s), point at a tile and let go. No file needed.
 </p>
 
 - **System controls:** Wi-Fi, Bluetooth, appearance (auto, light, dark), keyboard backlight, Keep Awake (15 minutes, 1 hour, 4 hours, until off), System Settings, folders. Tiles with options open a second ring.
+- **Focus:** add the Focus tile in the ring editor and switch Do Not Disturb, Work, Sleep and your other modes. macOS lets apps start Focus only through Shortcuts, so each mode runs a shortcut of yours (Settings → Rings → System → Focus).
 - **Apps, folders and Telegram chats** that you pin yourself. Chat photos are read from Telegram or chosen by drag and drop.
 - **Recent and frequent apps,** counted by Shiftio itself, as a separate tile or merged with your pins.
 - **Screenshot and screen recording** tiles (area, window or screen) that open the result in Quick Look. Add them in the ring editor.
@@ -76,6 +90,30 @@ Hold **⌥⇧** (about 0.3 s), point at a tile and let go. No file needed.
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/popup-player-dark.webp"><img src="docs/images/popup-player.webp" width="49%" alt="Music player above the ring"></picture>
   <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/popup-recent-dark.webp"><img src="docs/images/popup-recent.webp" width="49%" alt="Recent apps"></picture>
+</p>
+
+## Documents, data and folders
+
+The ring knows what a file is. A Markdown, JSON or XML file gets **Preview**; a folder gets its own ring; a CSV, JSON or XML file can be converted to the other two.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/ring-data-dark.webp"><img src="docs/images/ring-data.webp" width="32%" alt="Data ring"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/ring-video-dark.webp"><img src="docs/images/ring-video.webp" width="32%" alt="Video ring"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/ring-folder-dark.webp"><img src="docs/images/ring-folder.webp" width="32%" alt="Folder ring"></picture>
+</p>
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-preview-dark.webp"><img src="docs/images/tool-preview.webp" width="49%" alt="Markdown preview"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-preview-json-dark.webp"><img src="docs/images/tool-preview-json.webp" width="49%" alt="JSON preview as a tree"></picture>
+</p>
+
+- **Markdown:** images (next to the file, remote or HTML `<img>`), tables, task lists, code and GitHub alerts; convert to HTML, PDF or DOCX.
+- **JSON:** an ordered tree you can fold, a code view with line numbers, the path of the value under the pointer, and the exact line and column when the file is not valid.
+- **Any document to PDF:** Word, RTF, HTML, text and Markdown are laid out by macOS itself; Pages, Keynote, Numbers, PowerPoint and Excel files are exported through those apps if you have them.
+- **PDF pages:** *Split* writes one file per page into a folder; *Pages* shows thumbnails or takes a range like `1-3, 7`.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-extract-pages-dark.webp"><img src="docs/images/tool-extract-pages.webp" width="49%" alt="Extract pages from a PDF"></picture>
 </p>
 
 ## Photo editor
@@ -136,20 +174,35 @@ Small focused windows that finish in one step.
 - **Overlay:** text or image watermark, blur or pixelate a region, burn in subtitles or export an SRT file.
 - **Save as:** MP4, HEVC, ProRes or GIF, with presets and a size limit for messengers (8, 10, 16, 25, 50 MB).
 
+## Audio editor
+
+Drag an audio file onto **Trim**: a waveform with handles, a play button, and tools for what usually follows a recording.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-trim-audio-dark.webp"><img src="docs/images/tool-trim-audio.webp" width="55%" alt="Audio trimmer"></picture>
+</p>
+
+- **Trim** with the handles, with the time shown while you drag.
+- **Fade in and out**, **volume** in dB, **normalize**, and **speed** from 0.5× to 2×.
+- **Format:** keep the original or save as MP3, M4A, WAV, AIFF or FLAC.
+- **Trim Silence** finds the quiet parts at the ends.
+
 ## Convert, compress and more
 
 Everything runs on the Mac, offline.
 
 | | |
 |---|---|
-| **Convert images** | JPG, PNG, HEIC, TIFF, GIF, BMP |
-| **PDF** | pages to images, merge PDFs, compress |
-| **Documents** | DOCX, RTF, HTML, TXT |
+| **Convert images** | JPG, PNG, HEIC, TIFF, GIF, BMP, WebP, AVIF (SVG files open too) |
+| **PDF** | pages to images, split into pages, extract chosen pages, merge, compress |
+| **Documents** | DOCX, RTF, HTML, TXT, and anything to PDF (see above) |
 | **Audio** | MP3, M4A, WAV, AIFF, FLAC |
-| **Video** | MP4, HEVC, ProRes, GIF |
+| **Data** | JSON, CSV, XML into each other; Markdown to HTML, PDF and DOCX |
+| **Video** | MP4, MOV, HEVC, ProRes, GIF; MKV, WebM and AVI through ffmpeg |
 | **Compress** | images, PDFs, audio and video, with a live size estimate and quality, size or bitrate limits |
 | **Text from speech** | transcripts and SRT subtitles with Apple's on-device speech model |
-| **Files** | ZIP, strip metadata (camera, location), Get Info |
+| **Files** | ZIP, unpack archives, strip metadata (camera, location), Get Info |
+| **Folders** | ZIP a folder, or run a tool on everything inside it (JPG, PNG, PDF, merge, strip metadata) |
 | **Batches** | several files at once, results saved next to each original |
 
 ## Looks and themes
@@ -190,7 +243,7 @@ A short interactive tour teaches both rings by letting you press the real keys, 
 - **No Accessibility permission.** Nothing asks for input monitoring.
 - **Permissions only on request.** Opening a ring never raises a system dialog; Bluetooth, Automation (Music, Spotify, System Events) and Files & Folders are requested only when you press Allow.
 - **On-device processing.** Vision (OCR, subject masks), Speech, Core Image, AVFoundation and PDFKit; nothing is uploaded and there is no account.
-- **First-launch components.** The MP3 encoder is downloaded as a checksum-verified Homebrew bottle, and the speech model on demand, so the app stays small.
+- **First-launch components.** The MP3 encoder (a checksum-verified Homebrew bottle), ffmpeg (a static build, checked against a pinned SHA-256) and the speech model are downloaded once, so the app stays small. If you already have ffmpeg from Homebrew, Shiftio uses it.
 - **Native.** SwiftUI and Liquid Glass, Apple silicon, 11 languages.
 
 ## Author

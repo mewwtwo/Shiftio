@@ -1,36 +1,13 @@
 # macOS
 .DS_Store
 
-# Xcode / build output (the project is generated from project.yml by XcodeGen)
-Shiftio.xcodeproj/
+# Xcode user state and build output
 xcuserdata/
 DerivedData/
 build/
 downloads/*.tmp
 
-# Local tooling and notes
+# Local tooling cache and the two git directories (see scripts/desktop-switch.sh)
 .codegraph/
-.claude/
-.codex/
-.mcp.json
-AGENTS.md
-CLAUDE.md
-
-# Design reference screenshots (other apps' interfaces, not for publishing)
-templates/
-
-# Second icon idea, on hold
-Design/AppIcon-glass.png
-Design/make-glass-icon.py
-Design/glass-icon-src/
-docs/DEVELOPMENT.md
-scripts/package-dmg.sh
-Shiftio/App/DebugRender.swift
-
-# Source code stays local; the public repo only has the README, LICENSE, docs images and downloads
-/Shiftio/
-/ShiftioTests/
-/Design/
-/scripts/
-/project.yml
-/docs/DEVELOPMENT.md
+.git-public/
+.git-private/

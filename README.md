@@ -15,7 +15,7 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.7 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.8 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 
@@ -52,9 +52,14 @@ Shiftio is a paid app with a **14-day free trial** that has every feature.
 
 ## Contents
 
-[What's new](#whats-new-in-017) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-018) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
-## What's new in 0.1.7
+## What's new in 0.1.8
+
+- **Space closes editor windows.** In Compress, Crop, Add Background, Redact, Annotate, Preview, Get Info and Extract Pages. (Trim Audio and Edit Video keep Space for play.)
+- **Dolby Atmos in the player (experimental).** E-AC-3 JOC tracks play straight from the file when no delay or equalizer is used. Not yet tested on a real Atmos file.
+
+### Earlier: 0.1.7
 
 - **Trial and license.** A 14-day free trial, then a license key from Gumroad (see [Price and license](#price-and-license)). A new **License** tab in Settings shows the days left, takes your key and lets you deactivate a Mac. A key works on up to 3 Macs, and everything works offline after activation.
 - **Play tool for video macOS can't open.** MKV, AVI, WebM, WMV, FLV and TS files get a **Play** tile (Media → Tools). Shiftio prepares a playable copy with ffmpeg (a few seconds when the picture can be copied as it is, otherwise it is re-encoded with the graphics chip) and opens it in a player with the usual macOS controls, audio-track and subtitle choice. The copy is deleted when you close the window.
@@ -198,6 +203,32 @@ Small focused windows that finish in one step.
 - **Overlay:** text or image watermark, blur or pixelate a region, burn in subtitles or export an SRT file.
 - **Save as:** MP4, HEVC, ProRes or GIF, with presets and a size limit for messengers (8, 10, 16, 25, 50 MB).
 - **Play:** MKV, AVI, WebM, WMV, FLV and TS files that macOS can't open open in a player (Media → Tools → Play).
+
+## Video player
+
+MKV, AVI, WebM, WMV, FLV and TS files that macOS can't open get a **Play** tile (Media → Tools). They open in Shiftio's own player.
+
+- **Starts at once.** A short copy of the beginning plays right away, while the rest of the file is prepared in the background, so even a 30 GB film starts in a moment. Jump ahead of what is ready and the player waits for it.
+- **Video tab.** HDR switch and Brightness, Contrast, Saturation, Gamma and Hue sliders (double-click a slider to reset it).
+- **Picture tab.** Choose the **aspect ratio** (4:3, 16:9, 16:10, 21:9, 5:4 and more): the window takes that shape and the extra at the edges is cut away (or the picture is stretched, if you pick that), so no black bars are left. **Crop** to a ratio inside the same window; zoom from 100% to 400% (drag the picture to move it, pinch on a trackpad); rotate and flip.
+- **Audio tab.** Every audio track with its language, an external audio file, a delay from -5 to +5 seconds, and a 10-band equalizer (32 Hz to 16 kHz, ±12 dB) with presets.
+- **Subtitles tab.** Two subtitle lines at once (primary at the bottom, secondary at the top), taken from the file or from SRT, ASS, SSA and VTT files, with delay, position, scale, font, colour, border and shadow.
+- **Your layout.** The controls float, or sit at the top or bottom; the sidebar goes on either side. The file name is shown at the top.
+- **Carries on where you left off.** Close a film and open it again, and it starts from the same place (a few seconds back), with a short note saying so.
+- **Picture in Picture.** The button next to the speed puts the film in a small floating window.
+- **Full screen.** The file name is shown in macOS's own bar at the top, not on the picture.
+- **Keys.** Space plays and pauses, ← and → jump 5 seconds (30 with ⇧), ↑ and ↓ change the volume, M mutes, F goes full screen.
+
+Files macOS can play (MP4, MOV) are not changed; the player is for the rest. ffmpeg, which prepares the file, is downloaded on first use like the other components, and the prepared copy is deleted when you close the window.
+
+## Finder thumbnails for MKV and WebM
+
+macOS shows a plain icon for Matroska (`.mkv`) and WebM videos. Shiftio ships a Quick Look extension that puts a frame of the film on the icon instead, in every folder, with no setup and without touching your files.
+
+- **Formats.** MKV and WebM with H.264, HEVC or VP9 video (and AV1 on Macs that decode it in hardware). Anything macOS already shows (MP4, MOV, images, PDFs, text, audio) is left to the system.
+- **It reads the file itself** and decodes the frame with the system's video decoders; nothing is uploaded and ffmpeg is not needed for this.
+- **Switch.** Shiftio turns it on the first time it opens. It is a switch in **Settings → General → Thumbnails for MKV and WebM**; the button next to it opens the list of Quick Look extensions in System Settings.
+- **If the icons stay plain,** press **Refresh Thumbnails** in the same place and reopen the folder. macOS keeps its choice of thumbnail maker for a kind of file until its thumbnail service restarts; that button restarts it (no need to log out).
 
 ## Audio editor
 

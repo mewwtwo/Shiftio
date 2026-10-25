@@ -15,13 +15,13 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.6 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.7 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 
 **Shiftio** lives in the menu bar. Drag any file (or several) and press **Shift**: a ring of actions opens under the pointer. Convert it, compress it, trim it, crop it, annotate it, preview it, transcribe it. Drop the file on a tile and the result is saved next to the original. Hold **⌥⇧** with nothing in your hand and a second ring opens with system controls, your apps, folders and Telegram chats.
 
-Everything runs on the Mac, offline. No account, no Accessibility permission, no notifications.
+Your files are processed on the Mac and never uploaded. No account, no Accessibility permission, no notifications. The internet is needed only to start the free trial and to activate a license; after that Shiftio works offline.
 
 ## Install
 
@@ -30,13 +30,37 @@ Everything runs on the Mac, offline. No account, no Accessibility permission, no
    ```bash
    xattr -dr com.apple.quarantine /Applications/Shiftio.app
    ```
-3. Requires macOS 26 and an Apple silicon Mac. The MP3 encoder, the video converter (ffmpeg) and the speech model are downloaded on first launch.
+3. Requires macOS 26 and an Apple silicon Mac. The MP3 encoder, the video converter (ffmpeg) and the speech model are downloaded on first launch, and the first launch needs an internet connection to start the free trial.
+
+## Price and license
+
+Shiftio is a paid app with a **14-day free trial** that has every feature.
+
+- **Trial.** Open Shiftio for the first time (with the internet on) and your 14 days start. The start date is kept on a server, so reinstalling or changing the Mac's clock does not give more time.
+- **A free month for everyone who downloads from GitHub.** Open **Settings → License**, paste the key below and press **Activate**:
+
+  ```
+  SHIFTIO-GITHUB-MONTH
+  ```
+
+  It gives you the full app for **30 days from the day you activate it** on your Mac (each Mac has its own 30 days, and one Mac can't renew it). Activating needs an internet connection.
+- **Buy.** A license costs **$0.99** (one-time) on [Gumroad](https://118628564410.gumroad.com/l/shiftio). The license key arrives in your purchase email.
+- **Activate.** Open **Settings → License**, paste the key and press **Activate**. Activating needs an internet connection; once it is done, Shiftio works fully **offline**, as long as you like.
+- **Three Macs.** One key works on up to 3 of your Macs. To move it, press **Deactivate This Mac** on the old one (Settings → License) and activate the new one.
+- **When the trial ends** the rings stop until you enter a key. Your files and settings are never touched.
+- **Refunds and revoked keys.** A key that was refunded stops working the next time Shiftio is online; the app then goes back to what is left of the trial.
 
 ## Contents
 
-[What's new](#whats-new-in-016) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-017) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
-## What's new in 0.1.6
+## What's new in 0.1.7
+
+- **Trial and license.** A 14-day free trial, then a license key from Gumroad (see [Price and license](#price-and-license)). A new **License** tab in Settings shows the days left, takes your key and lets you deactivate a Mac. A key works on up to 3 Macs, and everything works offline after activation.
+- **Play tool for video macOS can't open.** MKV, AVI, WebM, WMV, FLV and TS files get a **Play** tile (Media → Tools). Shiftio prepares a playable copy with ffmpeg (a few seconds when the picture can be copied as it is, otherwise it is re-encoded with the graphics chip) and opens it in a player with the usual macOS controls, audio-track and subtitle choice. The copy is deleted when you close the window.
+- **Trial start shows its state** in the menu bar popover, with a button to enter a key.
+
+### Earlier: 0.1.6
 
 - **Docs, Data and Folders rings.** PDF and documents now share one *Docs* ring set, with a new **Data** ring (JSON, CSV, XML) and a **Folder** ring (ZIP, Get Info, and the same tools applied to what is inside a dropped folder).
 - **Preview for Markdown, JSON and XML.** A viewer with images, tables and alerts, a collapsible JSON tree, and a *Preview / Code* switch.
@@ -173,6 +197,7 @@ Small focused windows that finish in one step.
 - **Sound:** volume, normalize, reduce noise, replace the soundtrack, or mute.
 - **Overlay:** text or image watermark, blur or pixelate a region, burn in subtitles or export an SRT file.
 - **Save as:** MP4, HEVC, ProRes or GIF, with presets and a size limit for messengers (8, 10, 16, 25, 50 MB).
+- **Play:** MKV, AVI, WebM, WMV, FLV and TS files that macOS can't open open in a player (Media → Tools → Play).
 
 ## Audio editor
 
@@ -198,7 +223,7 @@ Everything runs on the Mac, offline.
 | **Documents** | DOCX, RTF, HTML, TXT, and anything to PDF (see above) |
 | **Audio** | MP3, M4A, WAV, AIFF, FLAC |
 | **Data** | JSON, CSV, XML into each other; Markdown to HTML, PDF and DOCX |
-| **Video** | MP4, MOV, HEVC, ProRes, GIF; MKV, WebM and AVI through ffmpeg |
+| **Video** | MP4, MOV, HEVC, ProRes, GIF; MKV, WebM and AVI through ffmpeg; play MKV, AVI, WebM and more |
 | **Compress** | images, PDFs, audio and video, with a live size estimate and quality, size or bitrate limits |
 | **Text from speech** | transcripts and SRT subtitles with Apple's on-device speech model |
 | **Files** | ZIP, unpack archives, strip metadata (camera, location), Get Info |
@@ -242,7 +267,8 @@ A short interactive tour teaches both rings by letting you press the real keys, 
 
 - **No Accessibility permission.** Nothing asks for input monitoring.
 - **Permissions only on request.** Opening a ring never raises a system dialog; Bluetooth, Automation (Music, Spotify, System Events) and Files & Folders are requested only when you press Allow.
-- **On-device processing.** Vision (OCR, subject masks), Speech, Core Image, AVFoundation and PDFKit; nothing is uploaded and there is no account.
+- **On-device processing.** Vision (OCR, subject masks), Speech, Core Image, AVFoundation and PDFKit; your files are never uploaded and there is no account.
+- **What goes over the network.** The license check sends a hash of your Mac's hardware ID (not the ID itself) and, once you activate, your license key and the Mac's name. Besides that: the update check on GitHub and the first-launch downloads below. Nothing else.
 - **First-launch components.** The MP3 encoder (a checksum-verified Homebrew bottle), ffmpeg (a static build, checked against a pinned SHA-256) and the speech model are downloaded once, so the app stays small. If you already have ffmpeg from Homebrew, Shiftio uses it.
 - **Native.** SwiftUI and Liquid Glass, Apple silicon, 11 languages.
 

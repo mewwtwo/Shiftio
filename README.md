@@ -15,7 +15,7 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.8 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.9 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 
@@ -52,12 +52,18 @@ Shiftio is a paid app with a **14-day free trial** that has every feature.
 
 ## Contents
 
-[What's new](#whats-new-in-018) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-019) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
-## What's new in 0.1.8
+## What's new in 0.1.9
+
+- **Quick Look plays MKV and WebM again.** Pressing Space on an MKV or WebM in Finder showed a spinner forever; the preview now opens and plays the film with sound.
+- **Touch Bar in that preview.** A play/pause button on the left and a slider in the middle to jump around the film.
+- **Touch Bar order in the editors.** Buttons now sit on the left and the sliders in the middle.
+
+### Earlier: 0.1.8
 
 - **Space closes editor windows.** In Compress, Crop, Add Background, Redact, Annotate, Preview, Get Info and Extract Pages. (Trim Audio and Edit Video keep Space for play.)
-- **Dolby Atmos in the player (experimental).** E-AC-3 JOC tracks play straight from the file when no delay or equalizer is used. Not yet tested on a real Atmos file.
+- **Dolby Atmos in the player.** E-AC-3 JOC tracks play straight from the file when no delay or equalizer is used, so macOS recognises them as Dolby Atmos (checked on a real file with AirPods Pro).
 
 ### Earlier: 0.1.7
 

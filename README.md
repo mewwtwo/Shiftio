@@ -15,7 +15,7 @@
 </p>
 
 > [!NOTE]
-> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.9 beta): expect rough edges, and please open an issue when something breaks.
+> **Beta, and a vibe-coded project.** Shiftio is built with AI: the code is written by Claude Code under my direction, and I steer it by running the app and checking the result. It is early software (version 0.1.10 beta): expect rough edges, and please open an issue when something breaks.
 
 ---
 
@@ -52,9 +52,16 @@ Shiftio is a paid app with a **14-day free trial** that has every feature.
 
 ## Contents
 
-[What's new](#whats-new-in-019) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Quick Look](#quick-look-previews) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-0110) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Quick Look](#quick-look-previews) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
-## What's new in 0.1.9
+## What's new in 0.1.10
+
+- **Touch Bar sliders look like the system's.** A thin track with the accent colour, a small white rounded knob that grows while you hold it, on a dark rounded plate.
+- **Slider in the Quick Look video preview's Touch Bar** (it was squeezed to nothing).
+- **⌘Q closes only the window in front** (the player, an editor or Settings), not all of them; Shiftio itself stays running.
+- **Archive preview** is a plain list again; dragging files out of it is gone.
+
+### Earlier: 0.1.9
 
 - **Repair.** A new tile at the end of the Images → Edit ring: paint over something in a picture (a person, a wire, a blemish) and it is filled in from what is around it. It uses a Core ML model (LaMa) that is downloaded once, the first time you use it; if it can't be fetched, a built-in patch method takes over.
 - **Upscale.** Next to it: make a picture bigger. *Super Resolution* (4×, uses the Mac's own scaler; its model downloads once) or the quicker Core Image methods.

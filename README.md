@@ -52,13 +52,20 @@ Shiftio is a paid app with a **14-day free trial** that has every feature.
 
 ## Contents
 
-[What's new](#whats-new-in-019) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
+[What's new](#whats-new-in-019) · [Price and license](#price-and-license) · [File ring](#the-file-ring) · [Pop-up ring](#the-pop-up-ring) · [Documents, data and folders](#documents-data-and-folders) · [Photo editor](#photo-editor) · [Quick tools](#quick-tools) · [Video editor](#video-editor) · [Video player](#video-player) · [Finder thumbnails](#finder-thumbnails-for-mkv-and-webm) · [Quick Look](#quick-look-previews) · [Audio editor](#audio-editor) · [Convert and compress](#convert-compress-and-more) · [Looks and themes](#looks-and-themes) · [Settings](#settings-and-first-launch) · [Privacy](#privacy-and-technology)
 
 ## What's new in 0.1.9
 
-- **Quick Look plays MKV and WebM again.** Pressing Space on an MKV or WebM in Finder showed a spinner forever; the preview now opens and plays the film with sound.
-- **Touch Bar in that preview.** A play/pause button on the left and a slider in the middle to jump around the film.
-- **Touch Bar order in the editors.** Buttons now sit on the left and the sliders in the middle.
+- **Repair.** A new tile at the end of the Images → Edit ring: paint over something in a picture (a person, a wire, a blemish) and it is filled in from what is around it. It uses a Core ML model (LaMa) that is downloaded once, the first time you use it; if it can't be fetched, a built-in patch method takes over.
+- **Upscale.** Next to it: make a picture bigger. *Super Resolution* (4×, uses the Mac's own scaler; its model downloads once) or the quicker Core Image methods.
+- **Browse.** In the Folder ring next to *Extract*: look inside an archive (ZIP, 7z, RAR, TAR and the compressed forms) and take out only the files you pick.
+- **Quick Look for more files.** Press Space in Finder on:
+  - an **MKV or WebM** to play it right there, with sound and a slider (this was a spinner that never ended before);
+  - an **archive** to see its folders and files as a list you can open up;
+  - a **Markdown** file to see it rendered, or a **.torrent** to see its name, size, files, trackers and info hash.
+- **Touch Bar in the editors.** Every slider of the editor on screen is on the Touch Bar, buttons on the left and sliders in the middle (the Quick Look player has play/pause and a slider there too).
+- **Zoom in the video and audio trim.** A zoom bar, pinch and scroll on the timeline, for exact cuts.
+- **Screen recording with the Mac's sound.** The System Audio button in a recording adds what the Mac plays to the movie.
 
 ### Earlier: 0.1.8
 
@@ -145,6 +152,11 @@ The ring knows what a file is. A Markdown, JSON or XML file gets **Preview**; a 
 - **Markdown:** images (next to the file, remote or HTML `<img>`), tables, task lists, code and GitHub alerts; convert to HTML, PDF or DOCX.
 - **JSON:** an ordered tree you can fold, a code view with line numbers, the path of the value under the pointer, and the exact line and column when the file is not valid.
 - **Any document to PDF:** Word, RTF, HTML, text and Markdown are laid out by macOS itself; Pages, Keynote, Numbers, PowerPoint and Excel files are exported through those apps if you have them.
+- **Archives:** *Extract* unpacks everything; *Browse* lists what is inside (ZIP, 7z, RAR, TAR…) and extracts only the items you choose. Quick Look shows the same list.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-browse-dark.webp"><img src="docs/images/tool-browse.webp" width="49%" alt="Browse: the files inside an archive"></picture>
+</p>
 - **PDF pages:** *Split* writes one file per page into a folder; *Pages* shows thumbnails or takes a range like `1-3, 7`.
 
 <p align="center">
@@ -164,7 +176,14 @@ A full non-destructive editor for images. Save as a copy or replace the original
 - **Filters:** one-click looks (Vivid, Dramatic, Mono, Silvertone, Noir, Chrome, Fade, Instant, Process, Transfer, Sepia).
 - **Crop and rotate:** aspect ratios, straighten, rotate and flip.
 - **Markup:** arrows, rectangles, ellipses, pen, highlighter and text.
+- **Repair:** paint over what should go and it is filled in from the surroundings (Core ML model downloaded on first use).
+- **Upscale:** enlarge a picture, 4× with Super Resolution or a quicker Core Image method.
 - **Compare** with the original (hold the button), zoom, full undo and redo.
+
+<p align="center">
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-repair-dark.webp"><img src="docs/images/tool-repair.webp" width="49%" alt="Repair: paint over what to remove"></picture>
+  <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/tool-upscale-dark.webp"><img src="docs/images/tool-upscale.webp" width="49%" alt="Upscale: method, size and scale"></picture>
+</p>
 
 <p align="center">
   <picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-crop-dark.webp"><img src="docs/images/editor-crop.webp" width="80%" alt="Photo editor: crop"></picture>
@@ -235,6 +254,25 @@ macOS shows a plain icon for Matroska (`.mkv`) and WebM videos. Shiftio ships a 
 - **It reads the file itself** and decodes the frame with the system's video decoders; nothing is uploaded and ffmpeg is not needed for this.
 - **Switch.** Shiftio turns it on the first time it opens. It is a switch in **Settings → General → Thumbnails for MKV and WebM**; the button next to it opens the list of Quick Look extensions in System Settings.
 - **If the icons stay plain,** press **Refresh Thumbnails** in the same place and reopen the folder. macOS keeps its choice of thumbnail maker for a kind of file until its thumbnail service restarts; that button restarts it (no need to log out).
+
+## Quick Look previews
+
+Press Space on these files in Finder (the extensions come with the app and turn on with it):
+
+<p align="center">
+  <img src="docs/images/preview-mkv.webp" width="70%" alt="An MKV playing in Quick Look">
+</p>
+
+- **MKV and WebM** play in the preview, with sound, a play button and a slider (H.264, HEVC, VP9 and AV1 video; AAC, AC-3, E-AC-3 and MP3 sound). The Touch Bar gets play/pause and a slider.
+
+<p align="center">
+  <img src="docs/images/preview-zip.webp" width="49%" alt="An archive in Quick Look">
+  <img src="docs/images/preview-torrent.webp" width="49%" alt="A .torrent file in Quick Look">
+</p>
+
+- **Archives** (ZIP, 7z, RAR, TAR…) show their folders and files as a list you can open up.
+- **.torrent** files show the name, size, files, trackers and info hash, with no torrent client needed.
+- **Markdown** files are shown rendered.
 
 ## Audio editor
 
